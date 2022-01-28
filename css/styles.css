@@ -2,12 +2,15 @@ h1 {
   text-align: center;
   padding: 2px;
   margin: 5px;
-
-
 }
 
 h3 {
   text-align: center;
+  }
+body {
+  font-family:'Permanent Marker', cursive;
+  color: #702424;
+  background-color: #ff6500;
 }
 
 #pizza-form {
@@ -23,6 +26,3 @@ h3 {
   display: none;
 }
 
-#card {
-  background: #84a98c;
-}
