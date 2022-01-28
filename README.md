@@ -33,12 +33,18 @@ _This webpage will allow a user to select a pizzas' attributes (size, toppings) 
 
 ## Tests
 ```
-Describe Pizza(size, ["toping1", "topping2"])
+Describe: Pizza(size, ["toping1", "topping2"])
+
 Test: "It should create Pizza object with properties: toppings and size"
 Code: const pizza = new Pizza("medium", ["sausage", "mushroom"])
 Expected Output: Pizza{size: "medium", toppings:["sausage", "mushroom"]}
 
+Describe: Pizza.prototype.calculatePrice()
 
+Test: "After defining a base price it should calculate additional cost based on selected size/toppings"
+Code: const pizza = new Pizza("medium",["sausage", "mushroom"]);
+Expected Output: (pizza.calculatePrice()).toEqual(15);
+```
 ## License
 
 _Contact Justin Dechow at justin.dechow@gmail.com with any issues or concerns about this code_
