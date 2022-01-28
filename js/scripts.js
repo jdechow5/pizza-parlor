@@ -26,3 +26,20 @@ Pizza.prototype.calculatePrice = function () {
   }
   return basePrice + addToppings + sizeChoice;
 }
+
+// User Interface Logic
+
+$(document).ready(function () {
+  $("#pizza-form").submit(function (event) {
+    event.preventDefault();
+
+    const toppings = $("input[name=toppings]:checked").map(function () {
+      return $(this).val();
+    }).get();
+    const size = $("input[name=size]:checked").val();
+    const pizza = new Pizza(size, toppings);
+
+    $('#price').html(`${pizza.calculatePrice()}.00`)
+    $("#results").show();
+  })
+})
