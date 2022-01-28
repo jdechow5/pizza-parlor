@@ -16,7 +16,7 @@
     <form id="pizza-form">
       <div class="form-group" id="toppings-form">
         <h4>$2 Toppings</h4>
-        <p>Choose as many toppings as you'd like</p>
+
         <div class="toppings">
           <input type="checkbox" id="mushrooms" name="mushrooms" checked>
           <label for="mushrooms">Mushrooms</label>
@@ -38,7 +38,7 @@
           <label for="garlic">Garlic</label>
         </div>
         <h4>$3 Toppings</h4>
-        <p>Choose as many toppings as you'd like</p>
+
         <div class="toppings">
           <input type="checkbox" id="sausage" name="sausage" checked>
           <label for="sausage">Sausage</label>
@@ -60,16 +60,19 @@
       <div class="form-group" id="size-form">
         <h4>Choose the size of your pizza</h4>
         <div class="size">
-          <input type="radio" id="small" name="small" checked>
+          <input type="radio" id="small" name="size" checked>
           <label for="small">Small ($10)</label>
-          <input type="radio" id="medium" name="medium">
+          <input type="radio" id="medium" name="size">
           <label for="medium">Medium ($13)</label>
-          <input type="radio" id="large" name="large">
+          <input type="radio" id="large" name="size">
           <label for="large">Large ($15)</label>
         </div>
       </div>
+      <button type="submit" class="btn btn-primary btn-dark">Total Cost</button>
     </form>
-
+    <div id="results">
+      <p>The total cost of your pizza is $<span id="price"></span></p>
+    </div>
   </div>
 </body>
 
