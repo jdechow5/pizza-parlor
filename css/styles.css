@@ -16,7 +16,9 @@ body {
 #pizza-form {
   text-align: justify;
   margin: 3em;
-  padding: 3 em; 
+  padding: 3em;
+  background-color: #DF3636;
+  color:black; 
 }
 #size-form {
   text-align: center;
