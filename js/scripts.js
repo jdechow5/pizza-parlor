@@ -33,11 +33,12 @@ $(document).ready(function () {
   $("#pizza-form").submit(function (event) {
     event.preventDefault();
 
-    const toppings = $("input[name=toppings]:checked").map(function () {
+    const toppingsData = $("input[name=toppings]:checked").map(function () {
       return $(this).val();
-    }).get();
+    }).toArray();
+
     const size = $("input[name=size]:checked").val();
-    const pizza = new Pizza(size, toppings);
+    const pizza = new Pizza(size, toppingsData);
 
     $('#price').html(`${pizza.calculatePrice()}.00`)
     $("#results").show();
