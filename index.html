@@ -4,7 +4,8 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,7 +16,7 @@
 <body>
   <div class="container">
     <div class="card">
-      <h1>Justin's Famous Pizzeria</h1>
+      <h1>Justin's <span>Famous</span> Pizzeria</h1>
       <h3>Small cheese pizza only $10!</h3>
       <form id="pizza-form">
         <div class="form-group" id="toppings-form">
@@ -23,42 +24,42 @@
             <div class="col-6">
               <h4>$2 Toppings</h4>
               <div class="toppings">
-                <input type="checkbox" value="mushrooms" name="toppings" checked>
+                <input type="checkbox" value="mushrooms" name="toppings" id="mushrooms" checked>
                 <label for="mushrooms">Mushrooms</label>
               </div>
               <div class="toppings">
-                <input type="checkbox" value="black olives" name="toppings">
-                <label for="black olives">Black Olives</label>
+                <input type="checkbox" value="black olives" name="toppings" id="black-olives">
+                <label for="black-olives">Black Olives</label>
               </div>
               <div class="toppings">
-                <input type="checkbox" value="jalapenos" name="toppings">
+                <input type="checkbox" value="jalapenos" name="toppings" id="jalapenos">
                 <label for="jalapenos">Jalapenos</label>
               </div>
               <div class="toppings">
-                <input type="checkbox" value="onions" name="toppings">
+                <input type="checkbox" value="onions" name="toppings" id="onions">
                 <label for="onions">Onions</label>
               </div>
               <div class="toppings">
-                <input type="checkbox" value="garlic" name="toppings">
+                <input type="checkbox" value="garlic" name="toppings" id="garlic">
                 <label for="garlic">Garlic</label>
               </div>
             </div>
             <div class="col-6">
               <h4>$3 Toppings</h4>
               <div class="toppings">
-                <input type="checkbox" value="sausage" name="toppings" checked>
+                <input type="checkbox" value="sausage" name="toppings" id="sausage" checked>
                 <label for="sausage">Sausage</label>
               </div>
               <div class="toppings">
-                <input type="checkbox" value="bacon" name="toppings">
+                <input type="checkbox" value="bacon" name="toppings" id="bacon">
                 <label for="bacon">Bacon</label>
               </div>
               <div class="toppings">
-                <input type="checkbox" value="pepperoni" name="toppings">
+                <input type="checkbox" value="pepperoni" name="toppings" id="pepperoni">
                 <label for="pepperoni">Pepperoni</label>
               </div>
               <div class="toppings">
-                <input type="checkbox" value="anchovies" name="toppings">
+                <input type="checkbox" value="anchovies" name="toppings" id="anchovies">
                 <label for="anchovies">Anchovies</label>
               </div>
             </div>
@@ -68,20 +69,19 @@
         <div class="form-group" id="size-form">
           <h4>Choose the size of your pizza</h4>
           <div class="size">
-            <input type="radio" value="small" name="size" checked>
+            <input type="radio" value="small" name="size" id="small" checked>
             <label for="small">Small ($10)</label>
-            <input type="radio" value="medium" name="size">
+            <input type="radio" value="medium" name="size" id="medium">
             <label for="medium">Medium ($13)</label>
-            <input type="radio" value="large" name="size">
+            <input type="radio" value="large" name="size" id="large">
             <label for="large">Large ($15)</label>
           </div>
         </div>
         <button type="submit" class="btn btn-primary btn-dark">Total Cost</button>
+        <div id="results">
+          <p>The total cost of your pizza is $<span id="price"></span></p>
+        </div>
       </form>
-    </div>
-
-    <div id="results">
-      <p>The total cost of your pizza is $<span id="price"></span></p>
     </div>
   </div>
 </body>
